@@ -41,17 +41,15 @@ function addNumbers(num1, num2) {
 */
 function makePersonObject(id, name, email) {
   
- const person = {
+ var person = {
 
-  id: 5,
-  name: "Leia",
-  email: "leia@leia.com",
+  id: this.id,
+  name: this.'name',
+  email: this.'email',
   
  }
 
- const entries = Object.entries(person);
-
-  return Object.entries(person);
+return 
   
 }
 
