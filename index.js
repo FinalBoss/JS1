@@ -49,7 +49,7 @@ function makePersonObject(id, name, email) {
   
  }
 
- const values = Object.entries(person);
+ const entries = Object.entries(person);
 
   return Object.entries(person);
   
