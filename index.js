@@ -41,7 +41,7 @@ function addNumbers(num1, num2) {
 */
 function makePersonObject(id, name, email) {
   
- var person = {
+ const person = {
 
   id: id,
   name: name,
@@ -78,6 +78,7 @@ const person = {
   id: 1,
   name: 'Luke',
   email: 'luke@luke.com'
+
 };
 
 console.log(getName(person));
@@ -183,9 +184,19 @@ function get3rdCar(inventory) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
+
 function getCarInfoByIndex(inventory, index) {
   /* code here */
+
+  
+const carInfo = inventory.find((item, index) => { return index === 0 })
+
+
+  return `This is a ${carInfo.car_make} ${carInfo.car_model}`;
+
 }
+
+getCarInfoByIndex();
 
 /**
  * ### Challenge `getLastCarInfo`
