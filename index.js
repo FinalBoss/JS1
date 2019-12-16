@@ -43,15 +43,18 @@ function makePersonObject(id, name, email) {
   
  var person = {
 
-  id: this.id,
-  name: this.'name',
-  email: this.'email',
+  id: id,
+  name: name,
+  email: email
   
  }
 
-return 
+return person;
+
   
 }
+
+console.log(makePersonObject(3, 'bgenius', 'nope@gmail.com'))
 
 /**
  * ### Challenge `getName`
@@ -67,8 +70,17 @@ return
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName(name) {
- return 'Hello, my name is $makePersonalObject.name'
+
+  var hallo = {
+
+    name: name
+
+  };
+
+ return 'Hello, my name is' + ' ' + hallo.name;
 }
+
+console.log(getName('Luke'));
 
 /**
  * ### Challenge `makeSmartPerson`
