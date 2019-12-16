@@ -71,11 +71,16 @@ console.log(makePersonObject(3, 'bgenius', 'nope@gmail.com'))
 */
 function getName(name) {
 
-
- return 'Hello, my name is ' + name;
+  return 'Hello, my name is ' + person.name;
 }
 
-console.log(getName('Luke'))
+const person = {
+  id: 1,
+  name: 'Luke',
+  email: 'luke@luke.com'
+};
+
+console.log(getName(person));
 /**
  * ### Challenge `makeSmartPerson`
  * 
