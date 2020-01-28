@@ -275,6 +275,9 @@ return  inventory.sort((a, b) => (a.car_model > b.car_model) ? 1 : -1)
   //  const carVal = Object.values();
         let carYr = []
 
+
+
+
     for (let i = 0 ; i < inventory.length ; i++){
 
            carYr.push(inventory[i].car_year)
@@ -300,9 +303,33 @@ return  inventory.sort((a, b) => (a.car_model > b.car_model) ? 1 : -1)
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
-  /* code here */
-}
+function getOlderCars(inventory, max_year) {
+
+//const the3rd = inventory.find((item, index) => {
+  // return index === 2 // we use 2 because index is zero-based.
+// })
+// return `The car is a ${the3rd.car_make} ${the3rd.car_model}`
+
+
+let oldCars = [];
+
+
+
+  for ( max_year = 0 ; max_year < inventory.length ; max_year++){    
+
+     if (inventory[max_year].car_year <= inventory[50].car_year){
+
+
+      return oldCars.push(inventory[max_year])
+
+     }
+  } 
+
+  return oldCars
+
+  }
+
+
 
 /**
  * ### Challenge `getGermanCars`
