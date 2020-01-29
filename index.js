@@ -310,26 +310,19 @@ function getOlderCars(inventory, max_year) {
 // })
 // return `The car is a ${the3rd.car_make} ${the3rd.car_model}`
 
-
 let oldCars = [];
 
+for (let i = 0 ; i < inventory.length ; i++){
 
+if(inventory[i].car_year <= max_year){
 
-  for ( max_year = 0 ; max_year < inventory.length ; max_year++){    
+return oldCars.push(inventory[i])
 
-     if (inventory[max_year].car_year <= inventory[50].car_year){
+}
+  
+return oldCars;
 
-
-      return oldCars.push(inventory[max_year])
-
-     }
-  } 
-
-  return oldCars
-
-  }
-
-
+}}
 
 /**
  * ### Challenge `getGermanCars`
