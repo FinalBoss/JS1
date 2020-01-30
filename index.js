@@ -305,24 +305,25 @@ return  inventory.sort((a, b) => (a.car_model > b.car_model) ? 1 : -1)
 */
 function getOlderCars(inventory, max_year) {
 
-//const the3rd = inventory.find((item, index) => {
-  // return index === 2 // we use 2 because index is zero-based.
-// })
-// return `The car is a ${the3rd.car_make} ${the3rd.car_model}`
 
-let oldCars = [];
+
+const oldCars = [];
 
 for (let i = 0 ; i < inventory.length ; i++){
 
-if(inventory[i].car_year <= max_year){
+if ( inventory[i].car_year <= max_year ){
 
-return oldCars.push(inventory[i])
+ oldCars.push(inventory[i]);
 
 }
   
+
+
+}
+
 return oldCars;
 
-}}
+};
 
 /**
  * ### Challenge `getGermanCars`
@@ -335,9 +336,31 @@ return oldCars;
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
+function getGermanCars(inventory) {
   /* code here */
+
+
+  const germCars = []
+
+for (let i = 0 ; i < inventory.length ; i++){
+
+  if (inventory[i].car_make === 'Audi' || inventory[i].car_make === 'Mercedes-Benz' || inventory[i].car_make === 'Volkswagen' || inventory[i].car_make === 'BMW') {
+
+
+     germCars.push(inventory[i])
+
+  }
+
+
 }
+
+return germCars
+
+}
+
+
+
+
 
 /**
  * ### Challenge refactor to arrow functions
